@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+html:not(.dark) {
+  --color-bg: #f8fafc;        /* Slate 50 - clean light mode */
+  --color-panel: #ffffff;     /* Pure white card/panel */
+  --color-border: #e2e8f0;    /* Slate 200 border */
+  --color-hover: #f1f5f9;     /* Slate 100 hover */
+  --color-text-main: #0f172a; /* Slate 900 text */
+  --color-text-muted: #64748b;/* Slate 500 muted */
+  --color-accent-cyan: #0284c7; /* Sky 600 */
+  --color-accent-blue: #2563eb; /* Blue 600 */
+  --color-scrollbar-track: #f1f5f9;
+  --color-scrollbar-thumb: #cbd5e1;
+}
+
+html.dark,
+.dark {
+  --color-bg: #09090b;        /* Zinc 950 - deep dark mode */
+  --color-panel: #18181b;     /* Zinc 900 */
+  --color-border: #27272a;    /* Zinc 800 */
+  --color-hover: #27272a;     /* Zinc 800 hover */
+  --color-text-main: #e4e4e7; /* Zinc 200 */
+  --color-text-muted: #a1a1aa;/* Zinc 400 */
+  --color-accent-cyan: #0891b2; /* Cyan 600 */
+  --color-accent-blue: #0284c7; /* Sky 600 */
+  --color-scrollbar-track: #09090b;
+  --color-scrollbar-thumb: #27272a;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+code, pre {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar-thumb);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border);
+}

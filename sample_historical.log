@@ -1,0 +1,5 @@
+{"timestamp":"2026-08-26T10:20:17Z", "method":"GET", "path":"/dashboard", "user":"john", "status":200, "source_ip":"192.168.1.50"}
+SRC=10.10.1.20 DST=172.16.2.10 SP=4521 DP=443 PROTO=TCP ACTION=DENY VENDOR_FLAG=RULE_101
+SRC=10.10.1.20 DST=172.16.2.10 SP=4521 DP=443 PROTO=TCP ACTION=DENY VENDOR_FLAG=RULE_101
+CUSTOM_SEC_EVENT device=fw_x99 src_ip=10.5.5.1 target=10.5.5.10 severity=CRITICAL detail="Buffer overflow attempt"
+[AUDIT] user=john op=DELETE file=secret.doc host=10.0.0.5 timestamp=1724667616 status=FAIL
