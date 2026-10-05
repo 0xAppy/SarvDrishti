@@ -50,7 +50,7 @@ async def run_pytest_suite():
         cmd = [sys.executable, "-m", "pytest", "tests", "-v"]
         env = os.environ.copy()
         env["PYTHONPATH"] = "."
-        env["DATABASE_URL"] = "sqlite+aiosqlite:///./test_runner_ulpf.db"
+        env["DATABASE_URL"] = "sqlite+aiosqlite:///./test_runner_sarvdrishti.db"
 
         proc = await asyncio.create_subprocess_exec(
             *cmd,

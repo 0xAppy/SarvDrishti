@@ -6,7 +6,7 @@ import imageio_ffmpeg
 
 WORKSPACE = r"e:\sih-blockchain\ULPF"
 ARTIFACT_DIR = r"C:\Users\Admin\.gemini\antigravity-ide\brain\1c9d609c-2c61-4e06-85de-e7b790cee2ae"
-OUTPUT_VIDEO_WORKSPACE = os.path.join(WORKSPACE, "web_video.mp4")
+OUTPUT_VIDEO_WORKSPACE = os.path.join(WORKSPACE, "docs", "assets", "web_video.mp4")
 OUTPUT_VIDEO_ARTIFACT = os.path.join(ARTIFACT_DIR, "web_video.mp4")
 
 # Screenshots list

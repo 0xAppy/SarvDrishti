@@ -7,7 +7,7 @@ from app.services.event_service import EventService
 from app.db.database import AsyncSessionLocal
 from app.kafka.producer import in_memory_queue
 
-logger = logging.getLogger("ulpf.worker")
+logger = logging.getLogger("sarvdrishti.worker")
 
 class PipelineWorker:
     """
@@ -44,7 +44,7 @@ class PipelineWorker:
 
     async def start_worker_loop(self):
         self.is_running = True
-        logger.info("ULPF Worker processing loop started.")
+        logger.info("SarvDrishti Worker processing loop started.")
         while self.is_running:
             if in_memory_queue:
                 msg = in_memory_queue.pop(0)

@@ -12,24 +12,57 @@
 
 > **SarvDrishti** (सर्वदृष्टि — *"All-Seeing Vision"*) is an enterprise-grade, defensive log ingestion, parsing, normalization, field-level lineage tracking, and schema management platform built by **Team Black Pearl**. Designed to unify fragmented security telemetry into a single coherent view, SarvDrishti runs seamlessly on a single development machine (e.g. standard Windows 11 / Linux laptop with Docker Desktop), is fully containerized, 100% air-gapped capable, and production-ready.
 
+<p align="center">
+  <img src="docs/assets/homepage_preview.png" alt="SarvDrishti Dashboard Preview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.4);" />
+</p>
+
+---
+
+## 📚 Technical Documentation Index
+
+All in-depth engineering documentation, architecture diagrams, test plans, and presentation assets are organized in the [`docs/`](docs/) directory:
+
+| Document | Description |
+| :--- | :--- |
+| 🏗️ [**Architecture & Ingestion Pipeline**](docs/ARCHITECTURE.md) | High-level system topology, async streaming buffers, Kafka KRaft, and SIEM export |
+| 🗂️ [**Universal Common Schema (ECS)**](docs/UNIVERSAL_SCHEMA.md) | Elastic Common Schema (ECS) mapping, data types, validation rules & unmapped bucket |
+| 🔄 [**Data Flow & Event Lifecycle**](docs/DATA_FLOW.md) | Step-by-step trace of a raw log through detection, parsing, normalization, and lineage |
+| 🧩 [**Deterministic Parser Design**](docs/PARSER_DESIGN.md) | Format signature detection, regex/KV/JSON parsers, and versioned registry rules |
+| 🤖 [**AI Onboarding Studio Guide**](docs/AI_ONBOARDING.md) | Offline heuristic / LLM rule synthesis, automated validation, and human-in-the-loop approval |
+| 🛡️ [**Air-Gapped Deployment Guide**](docs/AIR_GAPPED_DEPLOYMENT.md) | Zero-internet Docker Compose deployment, air-gapped AI heuristics, and zero eval() security |
+| ⚙️ [**Project Setup & Developer Guide**](docs/PROJECT_SETUP.md) | Local rapid prototyping setup (Python 3.10+, FastAPI, Vite/React, SQLite/Postgres) |
+| 🧪 [**Comprehensive Test Plan**](docs/TEST_PLAN.md) | Automated Pytest suite commands, synthetic log emitters, and test coverage matrix |
+| 🎯 [**SIH26156 Requirement Matrix**](docs/SIH_REQUIREMENT_MATRIX.md) | Clause-by-clause traceability against the official Smart India Hackathon problem statement |
+| ⚖️ [**SIH Claims & Defense Strategy**](docs/SIH_CLAIMS.md) | Technical defense and evidence for jury presentation |
+| ❓ [**Jury Q&A Cheat Sheet (Top 20)**](docs/JURY_QA.md) | Rapid-fire answers for evaluation questions on ACID, Kafka, lineage, and scaling |
+| 🎬 [**2-Minute Demo Script & Walkthrough**](docs/DEMO_SCRIPT.md) | Timed 2-minute pitch script + interactive step-by-step test sequence |
+| 🔍 [**Implementation Verification Audit**](docs/IMPLEMENTATION_AUDIT.md) | Direct code execution audit verifying streaming, database, and UDP Syslog listener |
+| ⚠️ [**Known Limitations & Future Scope**](docs/KNOWN_LIMITATIONS.md) | Transparent engineering analysis of prototype boundaries and production scale roadmap |
+| 📊 [**Technical Approach Slide (Interactive HTML)**](docs/assets/technical_approach_slide.html) | Presentation slide layout with live technology badges and architecture diagram |
+
 ---
 
 ## 📌 Table of Contents
-1. [System Architecture & Data Flow](#-system-architecture--data-flow)
-2. [Core Concepts & Problem Solved](#-core-concepts--problem-solved)
-3. [Universal Common Event Schema](#-universal-common-event-schema)
-4. [Database Schema & Entity Relationships](#-database-schema--entity-relationships)
-5. [Dashboard Navigation Guide (7 Views)](#-dashboard-navigation-guide-7-views)
-6. [Quickstart & How to Run](#-quickstart--how-to-run)
-7. [Real-Time Integration & Live Testing Scripts](#-real-time-integration--live-testing-scripts)
-8. [SIH26156 Requirement Coverage Matrix](#-sih26156-requirement-coverage-matrix)
-9. [Jury Q&A Cheat Sheet (Top 20 Questions)](#-jury-qa-cheat-sheet-top-20-questions)
-10. [Final 2-Minute Jury Demo Script](#-final-2-minute-jury-demo-script)
-11. [Repository Directory Structure](#-repository-directory-structure)
+1. [Technical Documentation Index](#-technical-documentation-index)
+2. [System Architecture & Data Flow](#-system-architecture--data-flow)
+3. [Core Concepts & Problem Solved](#-core-concepts--problem-solved)
+4. [Universal Common Event Schema](#-universal-common-event-schema)
+5. [Database Schema & Entity Relationships](#-database-schema--entity-relationships)
+6. [Dashboard Navigation Guide (7 Views)](#-dashboard-navigation-guide-7-views)
+7. [Quickstart & How to Run](#-quickstart--how-to-run)
+8. [Real-Time Integration & Live Testing Scripts](#-real-time-integration--live-testing-scripts)
+9. [SIH26156 Requirement Coverage Matrix](#-sih26156-requirement-coverage-matrix)
+10. [Jury Q&A Cheat Sheet (Top 20 Questions)](#-jury-qa-cheat-sheet-top-20-questions)
+11. [Final 2-Minute Jury Demo Script](#-final-2-minute-jury-demo-script)
+12. [Repository Directory Structure](#-repository-directory-structure)
 
 ---
 
 ## 🏗️ System Architecture & Data Flow
+
+<p align="center">
+  <img src="docs/assets/technical_approach_slide.png" alt="SarvDrishti Technical Approach Slide" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
+</p>
 
 ```
                       +-------------------------------------------------+
@@ -439,85 +472,78 @@ python3 scripts/generate_logs.py --mode file --count 100
 ## 📁 Repository Directory Structure
 
 ```
-sarvdrishti/
-├── README.md
-├── docker-compose.yml
-├── ARCHITECTURE.md
-├── PROJECT_SETUP.md
-├── DATA_FLOW.md
-├── UNIVERSAL_SCHEMA.md
-├── PARSER_DESIGN.md
-├── AI_ONBOARDING.md
-├── AIR_GAPPED_DEPLOYMENT.md
-├── TEST_PLAN.md
-├── JURY_QA.md
-├── DEMO_SCRIPT.md
-├── sample_historical.log
-├── backend/
-│   ├── Dockerfile
-│   ├── requirements.txt
+SarvDrishti/
+├── README.md                          # Main project documentation & quickstart
+├── docker-compose.yml                 # Multi-container orchestration (Kafka, Postgres, FastAPI, React)
+├── sample_historical.log              # Sample log archive for historical file replay testing
+├── .gitignore                         # Production gitignore (Python, Node, DBs, Virtualenvs)
+├── backend/                           # High-performance FastAPI backend engine
+│   ├── Dockerfile                     # Container definition for Python backend
+│   ├── requirements.txt               # Backend dependencies (FastAPI, SQLAlchemy, Pydantic, Kafka, etc.)
 │   ├── app/
-│   │   ├── main.py
-│   │   ├── api/
-│   │   │   ├── events.py
-│   │   │   ├── sources.py
-│   │   │   ├── parsers.py
-│   │   │   ├── onboarding.py
-│   │   │   ├── replay.py
-│   │   │   └── stats.py
-│   │   ├── core/
-│   │   │   ├── schema.py
-│   │   │   └── validator.py
-│   │   ├── db/
-│   │   │   ├── database.py
-│   │   │   └── models.py
-│   │   ├── engine/
-│   │   │   └── normalizer.py
-│   │   ├── parsers/
-│   │   │   ├── base.py
-│   │   │   ├── firewall.py
-│   │   │   ├── syslog.py
-│   │   │   ├── application.py
-│   │   │   ├── unknown_heuristic.py
-│   │   │   └── registry.py
-│   │   ├── kafka/
-│   │   │   ├── producer.py
-│   │   │   └── worker.py
-│   │   ├── ai/
-│   │   │   └── adapter.py
-│   │   └── services/
-│   │       ├── event_service.py
-│   │       ├── syslog_listener.py
-│   │       ├── replay_service.py
-│   │       └── onboarding_service.py
-│   └── tests/
-│       ├── test_parsers.py
-│       ├── test_normalizer.py
-│       └── test_api.py
-├── frontend/
-│   ├── Dockerfile
-│   ├── nginx.conf
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── tailwind.config.js
-│   ├── index.html
-│   └── src/
-│       ├── main.jsx
-│       ├── App.jsx
-│       ├── index.css
-│       └── components/
-│           ├── Overview.jsx
-│           ├── SourcesView.jsx
-│           ├── ParserRegistryView.jsx
-│           ├── EventExplorer.jsx
-│           ├── LineageViewer.jsx
-│           ├── AIOnboardingStudio.jsx
-│           └── HistoricalReplayView.jsx
-└── scripts/
-    ├── generate_logs.py
-    ├── send_real_system_logs.py
-    ├── stream_my_real_syslog.py
-    └── live_stream_generator.py
+│   │   ├── main.py                    # Application entrypoint & UDP Syslog listener lifecycle
+│   │   ├── api/                       # REST endpoints (events, sources, parsers, replay, stats, testing)
+│   │   ├── core/                      # Pydantic Universal Schema model & EventValidator
+│   │   ├── db/                        # SQLAlchemy async database session & models
+│   │   ├── engine/                    # Deterministic Normalizer & unmapped field preservation
+│   │   ├── parsers/                   # Base parser, Firewall, Syslog, Web App, Heuristic & Registry
+│   │   ├── kafka/                     # Kafka producer & background consumer worker loop
+│   │   ├── ai/                        # Pluggable offline/online AI adapter
+│   │   └── services/                  # Business logic (event, syslog, replay, onboarding)
+│   └── tests/                         # Pytest test suite (parsers, normalizer, api)
+├── frontend/                          # React 18 + Vite + TailwindCSS operator dashboard
+│   ├── Dockerfile                     # Multi-stage production container with Nginx
+│   ├── nginx.conf                     # Production reverse proxy config
+│   ├── package.json                   # Frontend dependencies (@react-three, lucide, tailwind)
+│   ├── vite.config.js                 # Vite bundler config with backend API proxy
+│   ├── tailwind.config.js             # Custom theme tokens (dark/light mode palettes)
+│   ├── index.html                     # HTML root template with fonts & metadata
+│   ├── public/                        # Static assets (logo.png, technical_approach_slide.html)
+│   └── src/                           # React source code
+│       ├── main.jsx                   # React DOM root entry
+│       ├── App.jsx                    # Top bar, view routing, global navigation
+│       ├── index.css                  # Global styles & Tailwind directives
+│       └── components/                # 8 Dashboard Views
+│           ├── HomePage.jsx           # Landing overview & quick demo showcase
+│           ├── Overview.jsx           # Live system health, EPS meters, Kafka counters
+│           ├── SourcesView.jsx        # Configured telemetry source management
+│           ├── ParserRegistryView.jsx # Versioned parser rules & signature inspection
+│           ├── EventExplorer.jsx      # Real-time event grid & JSON inspect modal
+│           ├── LineageViewer.jsx      # Visual raw token -> schema field provenance
+│           ├── AIOnboardingStudio.jsx # Unknown log analysis, validation & approval
+│           └── HistoricalReplayView.jsx # Log file archive streaming & progress tracking
+├── scripts/                           # Live test generators & automation tools
+│   ├── generate_logs.py               # Multi-vendor test log emitter (API & file modes)
+│   ├── send_real_system_logs.py       # Live UDP Syslog socket test client
+│   ├── stream_my_real_syslog.py       # Local workstation telemetry streamer
+│   ├── live_stream_generator.py       # Continuous background event generator
+│   ├── generate_slide.py              # Presentation slide generator
+│   └── generate_web_video.py          # Demo video animation generator
+└── docs/                              # Detailed engineering documentation & visual assets
+    ├── assets/                        # Screenshots, video demo, slide HTML & logos
+    │   ├── homepage_preview.png       # Dashboard UI preview screenshot
+    │   ├── technical_approach_slide.png # Architecture & approach slide
+    │   ├── dark_mode_home.png         # Dark mode UI capture
+    │   ├── light_mode_full.png        # Full light mode capture
+    │   ├── primary_light_mode.png     # Primary light mode capture
+    │   ├── sih_white_theme_preview.png# White theme presentation preview
+    │   ├── technical_approach_slide.html # Standalone presentation slide
+    │   ├── web_video.mp4              # Demonstration video MP4
+    │   └── logo.png                   # Official SarvDrishti emblem
+    ├── ARCHITECTURE.md                # In-depth architectural design & SIEM integration
+    ├── DATA_FLOW.md                   # Step-by-step event lifecycle & state transitions
+    ├── UNIVERSAL_SCHEMA.md            # Comprehensive ECS schema dictionary & data types
+    ├── PARSER_DESIGN.md               # Deterministic parsing rules & signature patterns
+    ├── AI_ONBOARDING.md               # Dynamic parser synthesis & approval workflow
+    ├── AIR_GAPPED_DEPLOYMENT.md       # Zero-internet standalone deployment guide
+    ├── PROJECT_SETUP.md               # Local developer onboarding & troubleshooting
+    ├── TEST_PLAN.md                   # Test matrix & automated verification commands
+    ├── JURY_QA.md                     # Top 20 defense answers for jury evaluation
+    ├── DEMO_SCRIPT.md                 # 2-minute pitch & step-by-step interactive test sequence
+    ├── SIH_CLAIMS.md                  # Requirement defense strategy for problem SIH26156
+    ├── SIH_REQUIREMENT_MATRIX.md      # Detailed requirement traceability breakdown
+    ├── IMPLEMENTATION_AUDIT.md        # Technical execution audit report
+    └── KNOWN_LIMITATIONS.md           # Engineering trade-offs & production scaling roadmap
 ```
 
 ---

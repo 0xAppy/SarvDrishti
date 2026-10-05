@@ -4,7 +4,7 @@ from sqlalchemy.orm import declarative_base
 
 # Get absolute path to the backend directory
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-DB_PATH = os.path.join(BASE_DIR, "ulpf.db")
+DB_PATH = os.path.join(BASE_DIR, "sarvdrishti.db")
 
 # Default to SQLite async file DB for easy zero-setup local dev/tests, or PostgreSQL if configured
 DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite+aiosqlite:///{DB_PATH}")

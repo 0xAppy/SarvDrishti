@@ -3,7 +3,7 @@ from typing import Dict, Any, Tuple
 
 class BaseParser(ABC):
     """
-    Abstract Base Class for all ULPF Log Parsers.
+    Abstract Base Class for all SarvDrishti Log Parsers.
     Every parser must declare parser_id, version, format, and return:
     - extracted_fields: Dict of standardized normalized field keys and values
     - raw_field_mapping: Dict mapping normalized field key -> original raw token key

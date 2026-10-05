@@ -2,7 +2,7 @@ import asyncio
 import logging
 from app.kafka.producer import producer
 
-logger = logging.getLogger("ulpf.syslog")
+logger = logging.getLogger("sarvdrishti.syslog")
 
 class SyslogUDPServerProtocol(asyncio.DatagramProtocol):
     def connection_made(self, transport):

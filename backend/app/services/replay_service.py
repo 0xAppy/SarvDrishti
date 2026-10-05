@@ -3,7 +3,7 @@ import logging
 from typing import Dict, Any
 from app.kafka.producer import producer
 
-logger = logging.getLogger("ulpf.replay")
+logger = logging.getLogger("sarvdrishti.replay")
 
 class ReplayService:
     def __init__(self):

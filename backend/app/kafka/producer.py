@@ -3,7 +3,7 @@ import json
 import logging
 from typing import Dict, Any, Optional
 
-logger = logging.getLogger("ulpf.kafka.producer")
+logger = logging.getLogger("sarvdrishti.kafka.producer")
 
 # In-memory queue fallback when Kafka is not available
 in_memory_queue: list = []

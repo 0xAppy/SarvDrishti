@@ -704,8 +704,14 @@ html_content = f"""<!DOCTYPE html>
 </html>
 """
 
-html_path = os.path.join(WORKSPACE, "technical_approach_slide.html")
+html_path = os.path.join(WORKSPACE, "docs", "assets", "technical_approach_slide.html")
+os.makedirs(os.path.dirname(html_path), exist_ok=True)
 with open(html_path, "w", encoding="utf-8") as f:
     f.write(html_content)
 
-print(f"HTML slide created at {html_path}")
+pub_path = os.path.join(WORKSPACE, "frontend", "public", "technical_approach_slide.html")
+os.makedirs(os.path.dirname(pub_path), exist_ok=True)
+with open(pub_path, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"HTML slide created at {html_path} and {pub_path}")
