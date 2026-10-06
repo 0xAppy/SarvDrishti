@@ -13,7 +13,7 @@
 > **SarvDrishti** (सर्वदृष्टि — *"All-Seeing Vision"*) is an enterprise-grade, defensive log ingestion, parsing, normalization, field-level lineage tracking, and schema management platform built by **Team Black Pearl**. Designed to unify fragmented security telemetry into a single coherent view, SarvDrishti runs seamlessly on a single development machine (e.g. standard Windows 11 / Linux laptop with Docker Desktop), is fully containerized, 100% air-gapped capable, and production-ready.
 
 <p align="center">
-  <img src="docs/assets/homepage_preview.png" alt="SarvDrishti Dashboard Preview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.4);" />
+  <img src="docs/assets/sih_white_theme_preview.png" alt="SarvDrishti Dashboard Preview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.4);" />
 </p>
 
 ---
