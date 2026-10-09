@@ -9,15 +9,15 @@
 [![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-CP7.5-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)](https://kafka.apache.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Docker](https://img.shields.io/badge/Docker-Desktop-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
-[![🎥 Live Demo Video](https://img.shields.io/badge/🎥%20Demo%20Video-90s%20Interactive%20Walkthrough-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://github.com/0xAppy/SarvDrishti/blob/main/docs/assets/web_video.mp4)
+[![🎥 Live Demo Video](https://img.shields.io/badge/🎥%20Demo%20Video-90s%20Interactive%20Walkthrough-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://github.com/0xAppy/SarvDrishti/raw/main/docs/assets/web_video.mp4)
 
 > **SarvDrishti** (सर्वदृष्टि — *"All-Seeing Vision"*) is an enterprise-grade, defensive log ingestion, parsing, normalization, field-level lineage tracking, and schema management platform built by **Team Black Pearl**. Designed to unify fragmented security telemetry into a single coherent view, SarvDrishti runs seamlessly on a single development machine (e.g. standard Windows 11 / Linux laptop with Docker Desktop), is fully containerized, 100% air-gapped capable, and production-ready.
 > 
-> 🎬 **Interactive Video Walkthrough (1.5 Min):** [**▶️ Watch Live Platform Demo on GitHub (`web_video.mp4`)**](https://github.com/0xAppy/SarvDrishti/blob/main/docs/assets/web_video.mp4) • [Direct Raw Download](https://github.com/0xAppy/SarvDrishti/raw/main/docs/assets/web_video.mp4)
+> 🎬 **Interactive Video Walkthrough (1.5 Min):** [**▶️ Stream Full 90s HD Demo Video (`web_video.mp4`)**](https://github.com/0xAppy/SarvDrishti/raw/main/docs/assets/web_video.mp4) • [Direct Raw Download](https://github.com/0xAppy/SarvDrishti/raw/main/docs/assets/web_video.mp4)
 
 <p align="center">
-  <a href="https://github.com/0xAppy/SarvDrishti/blob/main/docs/assets/web_video.mp4" title="Click to Watch 90s Live Demo Video on GitHub">
-    <img src="docs/assets/sih_white_theme_preview.png" alt="SarvDrishti Dashboard Preview - Click to Watch Demo Video" width="100%" style="border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.4);" />
+  <a href="https://github.com/0xAppy/SarvDrishti/raw/main/docs/assets/web_video.mp4" title="Click to Stream 90s Live Demo Video">
+    <img src="docs/assets/sih_white_theme_preview.png" alt="SarvDrishti Dashboard Preview - Click to Stream Demo Video" width="100%" style="border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.4);" />
   </a>
 </p>
 
@@ -28,19 +28,21 @@
 A high-definition interactive demonstration navigating through the live SarvDrishti platform—showcasing lossless ingestion, live deterministic normalization, real-time telemetry, token-level field lineage, and dynamic AI-assisted parser onboarding.
 
 <p align="center">
-  <a href="https://github.com/0xAppy/SarvDrishti/blob/main/docs/assets/web_video.mp4">
-    <img src="https://img.shields.io/badge/▶️%20CLICK%20TO%20PLAY%20DEMO%20VIDEO%20ON%20GITHUB-00E5FF?style=for-the-badge&logo=github&logoColor=black" alt="Play Video on GitHub" height="36" />
+  <a href="https://github.com/0xAppy/SarvDrishti/raw/main/docs/assets/web_video.mp4" target="_blank">
+    <img src="https://img.shields.io/badge/▶️%20STREAM%20FULL%2090s%20DEMO%20VIDEO%20(1080p)-00E5FF?style=for-the-badge&logo=quicktime&logoColor=black" alt="Play Video on GitHub" height="36" />
   </a>
   &nbsp;
-  <a href="https://github.com/0xAppy/SarvDrishti/raw/main/docs/assets/web_video.mp4">
-    <img src="https://img.shields.io/badge/DIRECT%20DOWNLOAD-MP4%20(8.7MB)-38B2AC?style=for-the-badge&logo=quicktime&logoColor=white" alt="Download MP4" height="36" />
+  <a href="https://github.com/0xAppy/SarvDrishti/raw/main/docs/assets/web_video.mp4" download>
+    <img src="https://img.shields.io/badge/DIRECT%20DOWNLOAD-MP4%20(8.3MB)-38B2AC?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Download MP4" height="36" />
   </a>
 </p>
 
 <p align="center">
-  <video src="docs/assets/web_video.mp4" controls width="100%" style="border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.5);">
-    <a href="https://github.com/0xAppy/SarvDrishti/blob/main/docs/assets/web_video.mp4">▶️ Watch Live Demonstration Video (web_video.mp4)</a>
-  </video>
+  <a href="https://github.com/0xAppy/SarvDrishti/raw/main/docs/assets/web_video.mp4" title="Click to Stream Full 90-Second 1080p Video">
+    <img src="docs/assets/demo_preview.gif" alt="SarvDrishti Interactive Walkthrough Animated Preview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.5);" />
+  </a>
+  <br/>
+  <em>👆 Click the animated preview above to stream the complete 90-second Full HD video in your browser.</em>
 </p>
 
 ### ⏱️ Video Chapter Breakdown & Timestamps

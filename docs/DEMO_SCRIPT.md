@@ -67,7 +67,8 @@
 
 ## 🎥 Part 3: Official 90-Second Interactive Demonstration Video (`web_video.mp4`)
 **Duration:** Exactly 90 Seconds (1.5 Minutes) | **Resolution:** 1080p Full HD (60/30fps H.264)  
-**File Location:** `docs/assets/web_video.mp4` & `frontend/public/web_video.mp4`
+**File Location:** `docs/assets/web_video.mp4` & `frontend/public/web_video.mp4`  
+**Streaming Link:** [▶️ Stream 90s Video on GitHub](https://github.com/0xAppy/SarvDrishti/raw/main/docs/assets/web_video.mp4) • [Direct Raw Download](https://github.com/0xAppy/SarvDrishti/raw/main/docs/assets/web_video.mp4)
 
 | Timestamp | Act / Module | Interactive Actions & Demonstration Highlights |
 | :--- | :--- | :--- |
