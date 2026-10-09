@@ -62,3 +62,21 @@
    - Navigate to **Historical Replay**.
    - Select `sample_historical.log` generated via `python scripts/generate_logs.py --mode file --count 50`.
    - Click **Start Replay Pipeline**. Show live progress bar streaming lines through Kafka and persisting events into PostgreSQL with lineage.
+
+---
+
+## 🎥 Part 3: Official 90-Second Interactive Demonstration Video (`web_video.mp4`)
+**Duration:** Exactly 90 Seconds (1.5 Minutes) | **Resolution:** 1080p Full HD (60/30fps H.264)  
+**File Location:** `docs/assets/web_video.mp4` & `frontend/public/web_video.mp4`
+
+| Timestamp | Act / Module | Interactive Actions & Demonstration Highlights |
+| :--- | :--- | :--- |
+| **00:00 – 00:10** | **SIH Portal & Adaptive Theming** | Dynamic toggle between High-Contrast SOC Dark Mode and daytime Light Mode, live KPI metrics inspection (32,971+ logs, 99.99% SLA, <1.2ms latency). |
+| **00:10 – 00:22** | **Interactive Jury Testbench** | Live normalization of heterogeneous payloads: Fortinet Firewall (KV), Linux Syslog (RFC 5424), Nginx Web Access, and Unrecognized Zero-Day log trap. |
+| **00:22 – 00:32** | **Console Dashboard & Telemetry** | Real-time EPS gauge, worker buffer memory consumption, system health indicators, and 3D log stream visualizer. |
+| **00:32 – 00:42** | **Log Sources Fleet** | Heterogeneous ingestion endpoints overview: Perimeter Firewall (REST), Linux Syslog Daemon (UDP 5140), Web App Server, and AI Staging. |
+| **00:42 – 00:52** | **Deterministic Parser Registry** | Rule table inspection: regex patterns, token extraction signatures, version control (`v1.0.0`), and execution benchmarks (<0.8ms). |
+| **00:52 – 01:04** | **Event Explorer & Schema Inspector** | Live normalized event grid, row inspection displaying untouched raw payload alongside Elastic Common Schema (ECS) normalized JSON. |
+| **01:04 – 01:16** | **Token Field Lineage & Audit Trail** | Forensic provenance graph: tracing `destination.ip` back to raw token `DST=10.0.0.1` and certifying parser version provenance for SIEM/legal audit. |
+| **01:16 – 01:28** | **AI Onboarding Studio** | Zero-Day unknown log ingestion: offline heuristic analysis, token extraction, automated validation test (PASS), and zero-downtime production deployment. |
+| **01:28 – 01:30** | **Testing Sandbox & Wrap-Up** | Automated test verification bench, pipeline health check, and system readiness confirmation. |

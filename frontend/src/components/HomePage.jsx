@@ -152,22 +152,18 @@ export default function HomePage({ onNavigate }) {
   };
 
   const chapters = [
-    { label: "Hero & KPIs", time: 0 },
-    { label: "Jury Testbench", time: 6 },
-    { label: "SIH Claims", time: 12 },
-    { label: "Console Overview", time: 18 },
-    { label: "Sources Fleet", time: 24 },
-    { label: "Parser Registry", time: 30 },
-    { label: "Event Explorer", time: 35 },
-    { label: "Field Lineage", time: 40 },
-    { label: "Tutorial: Firewall", time: 45 },
-    { label: "Tutorial: Syslog", time: 52 },
-    { label: "Tutorial: Zero-Day", time: 59 },
-    { label: "Tutorial: AI Studio", time: 66 },
-    { label: "Tutorial: Lineage", time: 73 },
-    { label: "Tutorial: Sandbox", time: 79 },
-    { label: "Tutorial: Themes", time: 85 },
+    { label: "SIH Portal & Theme", time: 0 },
+    { label: "Jury Testbench", time: 10 },
+    { label: "Console Dashboard", time: 22 },
+    { label: "Sources Fleet", time: 32 },
+    { label: "Parser Registry", time: 42 },
+    { label: "Event Explorer", time: 52 },
+    { label: "Field Lineage", time: 64 },
+    { label: "AI Onboarding", time: 76 },
+    { label: "Testing Sandbox", time: 88 },
   ];
+
+  const isDemoRecording = typeof window !== 'undefined' && window.location.search.includes('recording=true');
 
   return (
     <div className="bg-darkBg text-textMain -m-4 p-6 md:p-10 font-sans space-y-12 min-h-screen transition-colors">
@@ -259,64 +255,66 @@ export default function HomePage({ onNavigate }) {
       </div>
 
       {/* Embedded Video Showcase Player */}
-      <div className="bg-darkPanel rounded-2xl border border-darkBorder shadow-lg p-6 md:p-8 space-y-6 transition-colors">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-darkBorder pb-5">
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider border border-blue-500/20">
-                Full HD Walkthrough & Tutorial
-              </span>
-              <span className="text-xs text-textMuted font-medium font-mono">Duration: 1.5 Minutes (90s)</span>
+      {!isDemoRecording && (
+        <div className="bg-darkPanel rounded-2xl border border-darkBorder shadow-lg p-6 md:p-8 space-y-6 transition-colors">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-darkBorder pb-5">
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider border border-blue-500/20">
+                  Full HD Walkthrough & Tutorial
+                </span>
+                <span className="text-xs text-textMuted font-medium font-mono">Duration: 1.5 Minutes (90s)</span>
+              </div>
+              <h3 className="text-xl font-bold text-textMain mt-1">
+                Live Interactive Platform Demonstration (Full HD)
+              </h3>
+              <p className="text-xs text-textMuted">
+                Interactive recording navigating through the live SarvDrishti platform: adaptive theming, multi-source ingestion, live event exploration, token-level field lineage, and dynamic AI parser onboarding.
+              </p>
             </div>
-            <h3 className="text-xl font-bold text-textMain mt-1">
-              Live System Demonstration & Operator Tutorial Video
-            </h3>
-            <p className="text-xs text-textMuted">
-              Complete tour of SarvDrishti followed by a hands-on operator tutorial: from real-time firewall parsing to zero-day AI rule synthesis and forensic lineage audit.
-            </p>
+
+            {/* Quick Chapter Buttons */}
+            <div className="flex flex-wrap items-center gap-1.5">
+              <span className="text-xs font-semibold text-textMuted mr-1">Chapters:</span>
+              {chapters.map((c, i) => (
+                <button
+                  key={i}
+                  onClick={() => seekTo(c.time)}
+                  className="px-2.5 py-1 rounded-lg bg-darkHover hover:bg-blue-500/10 text-textMain hover:text-blue-600 dark:hover:text-blue-400 text-xs font-medium border border-darkBorder transition-colors"
+                >
+                  {c.label}
+                </button>
+              ))}
+            </div>
           </div>
 
-          {/* Quick Chapter Buttons */}
-          <div className="flex flex-wrap items-center gap-1.5">
-            <span className="text-xs font-semibold text-textMuted mr-1">Chapters:</span>
-            {chapters.map((c, i) => (
-              <button
-                key={i}
-                onClick={() => seekTo(c.time)}
-                className="px-2.5 py-1 rounded-lg bg-darkHover hover:bg-blue-500/10 text-textMain hover:text-blue-600 dark:hover:text-blue-400 text-xs font-medium border border-darkBorder transition-colors"
-              >
-                {c.label}
-              </button>
-            ))}
+          {/* Video Player Container */}
+          <div className="relative rounded-xl overflow-hidden bg-black shadow-inner group aspect-video max-h-[560px] mx-auto border border-darkBorder">
+            <video
+              ref={videoRef}
+              src="/web_video.mp4"
+              className="w-full h-full object-contain"
+              onTimeUpdate={() => {
+                if (videoRef.current) {
+                  setCurrentTime(videoRef.current.currentTime);
+                  setDuration(videoRef.current.duration || 90.0);
+                }
+              }}
+              onEnded={() => setIsPlaying(false)}
+              playsInline
+              controls
+            />
+          </div>
+
+          <div className="flex items-center justify-between text-xs text-textMuted pt-1">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+              <span>Captured from live running environment (H.264 Universal 1080p)</span>
+            </div>
+            <div>File: <code className="bg-darkHover px-2 py-0.5 rounded text-textMain font-mono border border-darkBorder">web_video.mp4</code></div>
           </div>
         </div>
-
-        {/* Video Player Container */}
-        <div className="relative rounded-xl overflow-hidden bg-black shadow-inner group aspect-video max-h-[560px] mx-auto border border-darkBorder">
-          <video
-            ref={videoRef}
-            src="/web_video.mp4"
-            className="w-full h-full object-contain"
-            onTimeUpdate={() => {
-              if (videoRef.current) {
-                setCurrentTime(videoRef.current.currentTime);
-                setDuration(videoRef.current.duration || 24.7);
-              }
-            }}
-            onEnded={() => setIsPlaying(false)}
-            playsInline
-            controls
-          />
-        </div>
-
-        <div className="flex items-center justify-between text-xs text-textMuted pt-1">
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-            <span>Captured from live running environment (H.264 Universal 1080p)</span>
-          </div>
-          <div>File: <code className="bg-darkHover px-2 py-0.5 rounded text-textMain font-mono border border-darkBorder">web_video.mp4</code></div>
-        </div>
-      </div>
+      )}
 
       {/* Interactive Live Log Parser Playground */}
       <div className="bg-darkPanel rounded-2xl border border-darkBorder shadow-md p-6 md:p-8 space-y-6 transition-colors">

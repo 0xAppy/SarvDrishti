@@ -55,7 +55,7 @@ def send_syslog_udp(host="127.0.0.1", port=5140, count=20):
         time.sleep(0.05)
     print("Done streaming UDP Syslog logs.")
 
-def send_api_ingest(url="http://localhost:8000/api/events/ingest", count=20):
+def send_api_ingest(url="http://127.0.0.1:8000/api/events/ingest", count=20):
     print(f"Streaming {count} events to API endpoint {url}...")
     for _ in range(count):
         log = random.choice(FIREWALL_LOGS + APPLICATION_LOGS)

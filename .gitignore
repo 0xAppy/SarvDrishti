@@ -71,3 +71,7 @@ backend/test_runner_ulpf.db
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Video Recording Temporaries
+scripts/temp_raw_recording/
+temp_recordings/

@@ -9,12 +9,53 @@
 [![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-CP7.5-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)](https://kafka.apache.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Docker](https://img.shields.io/badge/Docker-Desktop-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![🎥 Live Demo Video](https://img.shields.io/badge/🎥%20Demo%20Video-90s%20Interactive%20Walkthrough-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://github.com/0xAppy/SarvDrishti/blob/main/docs/assets/web_video.mp4)
 
 > **SarvDrishti** (सर्वदृष्टि — *"All-Seeing Vision"*) is an enterprise-grade, defensive log ingestion, parsing, normalization, field-level lineage tracking, and schema management platform built by **Team Black Pearl**. Designed to unify fragmented security telemetry into a single coherent view, SarvDrishti runs seamlessly on a single development machine (e.g. standard Windows 11 / Linux laptop with Docker Desktop), is fully containerized, 100% air-gapped capable, and production-ready.
+> 
+> 🎬 **Interactive Video Walkthrough (1.5 Min):** [**▶️ Watch Live Platform Demo on GitHub (`web_video.mp4`)**](https://github.com/0xAppy/SarvDrishti/blob/main/docs/assets/web_video.mp4) • [Direct Raw Download](https://github.com/0xAppy/SarvDrishti/raw/main/docs/assets/web_video.mp4)
 
 <p align="center">
-  <img src="docs/assets/sih_white_theme_preview.png" alt="SarvDrishti Dashboard Preview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.4);" />
+  <a href="https://github.com/0xAppy/SarvDrishti/blob/main/docs/assets/web_video.mp4" title="Click to Watch 90s Live Demo Video on GitHub">
+    <img src="docs/assets/sih_white_theme_preview.png" alt="SarvDrishti Dashboard Preview - Click to Watch Demo Video" width="100%" style="border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.4);" />
+  </a>
 </p>
+
+---
+
+## 🎥 Live Interactive Demonstration Video (1.5 Minutes / 90s)
+
+A high-definition interactive demonstration navigating through the live SarvDrishti platform—showcasing lossless ingestion, live deterministic normalization, real-time telemetry, token-level field lineage, and dynamic AI-assisted parser onboarding.
+
+<p align="center">
+  <a href="https://github.com/0xAppy/SarvDrishti/blob/main/docs/assets/web_video.mp4">
+    <img src="https://img.shields.io/badge/▶️%20CLICK%20TO%20PLAY%20DEMO%20VIDEO%20ON%20GITHUB-00E5FF?style=for-the-badge&logo=github&logoColor=black" alt="Play Video on GitHub" height="36" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/0xAppy/SarvDrishti/raw/main/docs/assets/web_video.mp4">
+    <img src="https://img.shields.io/badge/DIRECT%20DOWNLOAD-MP4%20(8.7MB)-38B2AC?style=for-the-badge&logo=quicktime&logoColor=white" alt="Download MP4" height="36" />
+  </a>
+</p>
+
+<p align="center">
+  <video src="docs/assets/web_video.mp4" controls width="100%" style="border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.5);">
+    <a href="https://github.com/0xAppy/SarvDrishti/blob/main/docs/assets/web_video.mp4">▶️ Watch Live Demonstration Video (web_video.mp4)</a>
+  </video>
+</p>
+
+### ⏱️ Video Chapter Breakdown & Timestamps
+
+| Timestamp | Act / Module | Interactive Actions & Demonstration Highlights |
+| :--- | :--- | :--- |
+| **00:00 – 00:10** | **SIH Portal & Adaptive Theming** | Dynamic toggle between High-Contrast SOC Dark Mode and daytime Light Mode, live KPI metrics inspection (32,971+ logs, 99.99% SLA, <1.2ms latency). |
+| **00:10 – 00:22** | **Interactive Jury Testbench** | Live normalization of heterogeneous payloads: Fortinet Firewall (KV), Linux Syslog (RFC 5424), Nginx Web Access, and Unrecognized Zero-Day log trap. |
+| **00:22 – 00:32** | **Console Dashboard & Telemetry** | Real-time EPS gauge, worker buffer memory consumption, system health indicators, and 3D log stream visualizer. |
+| **00:32 – 00:42** | **Log Sources Fleet** | Heterogeneous ingestion endpoints overview: Perimeter Firewall (REST), Linux Syslog Daemon (UDP 5140), Web App Server, and AI Staging. |
+| **00:42 – 00:52** | **Deterministic Parser Registry** | Rule table inspection: regex patterns, token extraction signatures, version control (`v1.0.0`), and execution benchmarks (<0.8ms). |
+| **00:52 – 01:04** | **Event Explorer & Schema Inspector** | Live normalized event grid, row inspection displaying untouched raw payload alongside Elastic Common Schema (ECS) normalized JSON. |
+| **01:04 – 01:16** | **Token Field Lineage & Audit Trail** | Forensic provenance graph: tracing `destination.ip` back to raw token `DST=10.0.0.1` and certifying parser version provenance for SIEM/legal audit. |
+| **01:16 – 01:28** | **AI Onboarding Studio** | Zero-Day unknown log ingestion: offline heuristic analysis, token extraction, automated validation test (PASS), and zero-downtime production deployment. |
+| **01:28 – 01:30** | **Testing Sandbox & Wrap-Up** | Automated test verification bench, pipeline health check, and system readiness confirmation. |
 
 ---
 
@@ -43,18 +84,19 @@ All in-depth engineering documentation, architecture diagrams, test plans, and p
 ---
 
 ## 📌 Table of Contents
-1. [Technical Documentation Index](#-technical-documentation-index)
-2. [System Architecture & Data Flow](#-system-architecture--data-flow)
-3. [Core Concepts & Problem Solved](#-core-concepts--problem-solved)
-4. [Universal Common Event Schema](#-universal-common-event-schema)
-5. [Database Schema & Entity Relationships](#-database-schema--entity-relationships)
-6. [Dashboard Navigation Guide (7 Views)](#-dashboard-navigation-guide-7-views)
-7. [Quickstart & How to Run](#-quickstart--how-to-run)
-8. [Real-Time Integration & Live Testing Scripts](#-real-time-integration--live-testing-scripts)
-9. [SIH26156 Requirement Coverage Matrix](#-sih26156-requirement-coverage-matrix)
-10. [Jury Q&A Cheat Sheet (Top 20 Questions)](#-jury-qa-cheat-sheet-top-20-questions)
-11. [Final 2-Minute Jury Demo Script](#-final-2-minute-jury-demo-script)
-12. [Repository Directory Structure](#-repository-directory-structure)
+1. [Live Demonstration Video (1.5 Min)](#-live-interactive-demonstration-video-15-minutes--90s)
+2. [Technical Documentation Index](#-technical-documentation-index)
+3. [System Architecture & Data Flow](#-system-architecture--data-flow)
+4. [Core Concepts & Problem Solved](#-core-concepts--problem-solved)
+5. [Universal Common Event Schema](#-universal-common-event-schema)
+6. [Database Schema & Entity Relationships](#-database-schema--entity-relationships)
+7. [Dashboard Navigation Guide (7 Views)](#-dashboard-navigation-guide-7-views)
+8. [Quickstart & How to Run](#-quickstart--how-to-run)
+9. [Real-Time Integration & Live Testing Scripts](#-real-time-integration--live-testing-scripts)
+10. [SIH26156 Requirement Coverage Matrix](#-sih26156-requirement-coverage-matrix)
+11. [Jury Q&A Cheat Sheet (Top 20 Questions)](#-jury-qa-cheat-sheet-top-20-questions)
+12. [Final 2-Minute Jury Demo Script](#-final-2-minute-jury-demo-script)
+13. [Repository Directory Structure](#-repository-directory-structure)
 
 ---
 
@@ -518,7 +560,8 @@ SarvDrishti/
 │   ├── stream_my_real_syslog.py       # Local workstation telemetry streamer
 │   ├── live_stream_generator.py       # Continuous background event generator
 │   ├── generate_slide.py              # Presentation slide generator
-│   └── generate_web_video.py          # Demo video animation generator
+│   ├── generate_web_video.py          # Demo video animation generator
+│   └── record_interactive_demo.py     # Automated 90s Full HD interactive demonstration recorder
 └── docs/                              # Detailed engineering documentation & visual assets
     ├── assets/                        # Screenshots, video demo, slide HTML & logos
     │   ├── homepage_preview.png       # Dashboard UI preview screenshot
